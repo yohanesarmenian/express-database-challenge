@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.8/css/mdb.min.css" rel="stylesheet">
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+      <div class="container-fluid">
+        <div class="mt-5 mb-2">
+          <button class="btn btn-primary" onclick="location.href='/dashboard/history'">Tambah History</button>
+      </div>
+
+        <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th class="th-sm">Username
+          
+                </th>
+                <th class="th-sm">Email
+          
+                </th>
+                <th class="th-sm">History
+          
+                </th>
+                <th class="th-sm">Biodata
+          
+                </th>
+
+              </tr>
+            </thead>
+            <tbody>
+                <% users.forEach((users, history) => { %>
+              <tr>
+                <td><%= users.username %></td>
+                <td><%= users.email %></td>
+                <td><a href="#"><%= history.totalplay %></a></td>
+                <td><a href="#" class=""><%= users.email %></a></td>
+              </tr>
+                <% }) %>
+            </tbody>
+          </table>    
+      </div>
+    
+    <script>
+        $(document).ready(function () {
+        $('#dtBasicExample').DataTable()
+        $('.dataTables_length').addClass('bs-select')
+        })
+    </script>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.8/js/mdb.min.js"></script>
+  </body>
+</html>

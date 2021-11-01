@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <div style="flex-direction: column;align-items: center;margin-top: 10vh;">
+            <div class="row">
+                <form class="col s12" action="/create-history" method="POST">
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="totalplay" name="totalplay" type="text" class="validate">
+                        <label for="totalplay">totalplay</label>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <input name="win" type="text" placeholder="win" class="validate">
+                        <label for="win">win</label>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <input name="draw" type="text" class="validate" placeholder="draw">
+                        <label for="draw">draw</label>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <input name="lose" type="text" class="validate" placeholder="lose">
+                        <label for="lose">lose</label>
+                    </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
